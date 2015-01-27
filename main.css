@@ -18,10 +18,12 @@ body, html {
 }
 
 .marker {
-    width: 10px;
-    height: 10px
-    background: red;
+    font-size: 25px;
+    line-height: 25px;
+    color: red;
     position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 /*.marker:after {
@@ -31,6 +33,3 @@ body, html {
     font-size: 50px;
     position: absolute;
 }*/
-
-
-
