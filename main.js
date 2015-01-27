@@ -19,8 +19,9 @@ $(document).on('ready', function() {
 
         $(addNote).appendTo('body').focus().on({
           'blur': function(){
-            marker.append('<p>' + this.value);
-
+            if(this.value) {
+             marker.append('<p>' + this.value);
+            }
 
             this.remove();
           },
