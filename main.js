@@ -10,14 +10,13 @@ $(document).on('ready', function() {
 
         var marker = $('<div class="marker">X</div>');
         marker.css({
-            top: e.pageY,
-            left: e.pageX
+            top: (e.pageY / $(this).height() * 100) + '%',
+            left: (e.pageX / $(this).width() * 100) + '%'
         });
         $(this).append(marker);
 
         var addNote = $('<input placeholder="Enter note">').addClass('addNote');
-
-        $(addNote).appendTo('body').focus().on({
+        $(addNote).appendTo($(this)).focus().on({
           'blur': function(){
             marker.append('<p>' + this.value);
 
