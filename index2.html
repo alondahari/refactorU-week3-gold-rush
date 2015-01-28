@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqWYn2KBjn7NMOxkOsqWHkznAnVJi_ZH8">
+    </script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <style>.container{background: none;}</style>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          //alaska
+          center: { lat: 60, lng: -151},
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+  </head>
+  <body>
+  <div class="container"><div id="map-canvas"></div></div>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="main.js"></script>
+
+  </body>
+
+</html>

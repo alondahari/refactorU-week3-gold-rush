@@ -18,8 +18,9 @@ $(document).on('ready', function() {
         var addNote = $('<input placeholder="Enter note">').addClass('addNote');
         $(addNote).appendTo($(this)).focus().on({
           'blur': function(){
-            marker.append('<p>' + this.value);
-
+            if(this.value) {
+             marker.append('<p>' + this.value);
+            }
 
             this.remove();
           },
